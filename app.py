@@ -169,10 +169,10 @@ class NoteTakingApp(QMainWindow):
                 else:
                     QMessageBox.critical(
                         self,
-                        "Erreur de Déchiffrement",
-                        "La clé de déchiffrement est incorrecte. Le fichier ne peut pas être déchiffré.",
-                        "Vérifiez votre fichier config.cfg",
-                )
+                        "!! Erreur de déchiffrement !!",
+                        "La clé de déchiffrement est incorrecte. \nLe fichier ne peut pas être déchiffré. \nVérifiez votre fichier config.cfg",
+                        QMessageBox.Ok
+                    )
 
     def encrypt(self, data, key):
         cipher_suite = Fernet(key)
